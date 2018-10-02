@@ -15,13 +15,19 @@ For any issue arising during the installation process, just [submit an issue](ht
 
 First of all you will need to download and install GoPro fusion, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
 
-Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:<br/>
-`which python`<br/>
-If the output is:<br/>
-`/usr/bin/python`<br/>
+Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:
+```
+which python
+```
+If the output is:
+```
+/usr/bin/python
+```
 Or any python available should be good to go.<br/>In case no python is installed, just [download and install it](https://www.python.org/downloads/mac-osx/).<br/>
-Easier: if you already have [homebrew](https://brew.sh/) just run:<br/>
-`brew install python`
+Easier: if you already have [homebrew](https://brew.sh/) just run:
+```
+brew install python
+```
 
 You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:<br/>`pip install --upgrade git+https://github.com/mapillary/mapillary_tools`<br/>Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
 
