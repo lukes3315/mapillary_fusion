@@ -20,6 +20,7 @@ You may not need to download it, if you open a [terminal](https://blog.teamtreeh
 You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:
 
 `pip install --upgrade git+https://github.com/mapillary/mapillary_tools`
+
 Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
 
 To confirm this has been installed properly verify the `pip` output:
