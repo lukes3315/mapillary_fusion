@@ -29,7 +29,11 @@ Easier: if you already have [homebrew](https://brew.sh/) just run:
 brew install python
 ```
 
-You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:<br/>`pip install --upgrade git+https://github.com/mapillary/mapillary_tools`<br/>Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
+You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:
+```
+pip install --upgrade git+https://github.com/mapillary/mapillary_tools
+```
+Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
 
 To confirm this has been installed properly verify the `pip` output:
 
