@@ -92,6 +92,7 @@ There we go! All done! you can just open the images and you'll the beautiful sti
 First of all, you need to register on Mapillary's [website](https://mapillary.com/signup), we will need the username they provide to upload data.
 
 Once you have retrieved your username, you can just upload the data with this command line:<br/>`python mapillary_processor.py --upload_directory=stitched_files --user=mapillary_user`<br/>
+
 This will then prompt you to enter both your email address and password to authenticate with Mapillary's servers:
 ```
 Running user_process for 80 images, skipping 0 images.
