@@ -89,9 +89,9 @@ There we go! All done! you can just open the images and you'll the beautiful sti
 
 ### Uploading
 
-First of all, you need to register on Mapillary's [website](https://mapillary.com/signup).<br/>We will need the username they provide to upload data.
+First of all, you need to register on Mapillary's [website](https://mapillary.com/signup), we will need the username they provide to upload data.
 
 Once you have retrieved your username, you can just upload the data with this command line:<br/>`python mapillary_processor.py --upload_directory=stitched_files --user=your_username`
 
 Enjoy!
-For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues)<br/>and I'll get back to you as soon as I can.
+For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get back to you as soon as I can.
