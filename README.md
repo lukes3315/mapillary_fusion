@@ -91,7 +91,43 @@ There we go! All done! you can just open the images and you'll the beautiful sti
 
 First of all, you need to register on Mapillary's [website](https://mapillary.com/signup), we will need the username they provide to upload data.
 
-Once you have retrieved your username, you can just upload the data with this command line:<br/>`python mapillary_processor.py --upload_directory=stitched_files --user=your_username`
+Once you have retrieved your username, you can just upload the data with this command line:<br/>`python mapillary_processor.py --upload_directory=stitched_files --user=mapillary_user`<br/>
+This will then prompt you to enter both your email address and password to authenticate with Mapillary's servers:
+```
+Running user_process for 80 images, skipping 0 images.
+Enter user credentials for user mapillary_user :
+Enter email : mapillary_user@domain.com
+Enter user password :
+```
+
+After having running this you should be seeing Mapillary's processing and uploading engines to some work:<br/>
+```
+Sub process finished
+Running import_meta_data_process for 15 images, skipping 65 images.
+Sub process finished
+Running geotag_process for 15 images, skipping 65 images.
+Sub process finished
+Running sequence_process for 0 images, skipping 80 images.
+Running sequence_process for 42 images, skipping 0 images.
+Running sequence_process for 38 images, skipping 0 images.
+Sub process finished
+Running upload_params_process for 80 images, skipping 0 images.
+Sub process finished
+Running mapillary_image_description for 80 images, skipping 0 images.
+Sub process finished
+Process done.
+No post processing action specified.
+```
+If no errors occured you're all good, and it will proceed to the next steps.
+
+And finally the uploads:
+```
+Uploading 80 images with valid mapillary tags (Skipping 0)
+Uploading with 5 threads
+Done uploading 80 images.====================================] 100.0% ... 0 images left.
+```
+
+All done.
 
 Enjoy!
 For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get back to you as soon as I can.
