@@ -6,7 +6,7 @@ fusion_path="/Applications/Fusion Studio 1.3.app/Contents/MacOS/./FusionStudio"
 
 
 def showHelp():
-    print("Usage:\n--help: show this menu\n--stitch_directory: GoPro root directory that contains images to fuse.\n--output_directory: output directory\n--dwarp: on/off turns on or off d.warp in stitching process.\n--upload_directory: directory containing images to upload to Mapillary's services.\n--debug: display debug information from Fusion software.")
+    print("Usage:\n--help: show this menu\n--stitch_directory: GoPro root directory that contains images to fuse.\n--output_directory: output directory\n--dwarp: on/off turns on or off d.warp in stitching process.\n--upload_directory: directory containing images to upload to Mapillary's services.\n--debug: display debug information from Fusion software.\n--user: Your mapillary username, view README.")
     exit(1)
 
 if (len(sys.argv) == 1):
@@ -18,6 +18,7 @@ i = 1
 stitch_directory=""
 output_directory=""
 upload_directory=""
+mapillary_username=""
 dwarp_enabled="off"
 debug_enabled="off"
 
@@ -31,7 +32,8 @@ def parseCLI(arg):
     global output_directory
     global upload_directory
     global dwarp_enabled
-    global debugp_enabled
+    global debug_enabled
+    global mapillary_username
 
     if (arg.find("help") >= 0):
         showHelp()
@@ -48,6 +50,8 @@ def parseCLI(arg):
         dwarp_enabled=extractCLIValue(arg)
     elif (arg.find("debug")>=0):
         debug_enabled=extractCLIValue(arg)
+    elif (arg.find("user")>=0):
+        mapillary_username=extractCLIValue(arg)
 
 while (i < len(sys.argv)):
     idx=sys.argv[i].find("--")
@@ -55,14 +59,23 @@ while (i < len(sys.argv)):
         parseCLI(sys.argv[i][idx+2:])
     i=i+1
 
-
-
 if (len(upload_directory) > 0 and os.path.isdir(upload_directory)):
     # run Mapillary's uploader
-    print("Upload")
+    if (len(mapillary_username) == 0 ):
+        print("You need to enter your user name, please view README.md")
+        exit(0)
+    # Run Mapillary's process and upload system.
+    mapillary_call=[]
+    mapillary_call.append("mapillary_tools")
+    mapillary_call.append("process_and_upload")
+    mapillary_call.append("--import_path")
+    mapillary_call.append(upload_directory)
+    mapillary_call.append("--user_name")
+    mapillary_call.append(mapillary_username)
+    call(mapillary_call)
     exit(0)
 elif (len(stitch_directory) == 0 or len(output_directory) == 0):
-    print("Error: you need to input ")
+    print("Error: you need to input both the directory to stitch AND the output directory.")
     exit(0)
 # print(stitch_directory + " " + output_directory)
 
