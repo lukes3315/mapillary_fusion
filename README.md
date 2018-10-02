@@ -156,4 +156,7 @@ Done uploading 80 images.====================================] 100.0% ... 0 imag
 All done.
 
 Enjoy!
+
+### Contact
+
 For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get back to you as soon as I can.
