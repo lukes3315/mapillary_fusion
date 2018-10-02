@@ -6,7 +6,7 @@ fusion_path="/Applications/Fusion Studio 1.3.app/Contents/MacOS/./FusionStudio"
 
 
 def showHelp():
-    print("Usage:\n--help: show this menu\n--stitch_directory: GoPro root directory that contains images to fuse.\n--output_directory: output directory\n--dwarp: on/off turns on or off d.warp in stitching process.\n--upload_directory: directory containing images to upload to Mapillary's services.\n--debug: display debug information from Fusion software.\n--user: Your mapillary username, view README.")
+    print("Usage:\n--help: show this menu.\n--stitch_directory: GoPro root directory that contains images to fuse.\n--output_directory: output directory, where your stitched will be stored.\n--dwarp: on/off turns on or off d.warp in stitching process (off by default).\n--upload_directory: directory containing images to upload to Mapillary's services.\n--debug: display debug information from Fusion software.\n--user: Your mapillary username, view README (only required for upload procedure).")
     exit(1)
 
 if (len(sys.argv) == 1):

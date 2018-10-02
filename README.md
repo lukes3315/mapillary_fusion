@@ -59,13 +59,13 @@ Then type:\ `python mapillary_processor.py`
 This will output:
 ```
 Usage:
---help: show this menu
+--help: show this menu.
 --stitch_directory: GoPro root directory that contains images to fuse.
---output_directory: output directory
---dwarp: on/off turns on or off d.warp in stitching process.
+--output_directory: output directory, where your stitched will be stored.
+--dwarp: on/off turns on or off d.warp in stitching process (off by default).
 --upload_directory: directory containing images to upload to Mapillary's services.
 --debug: display debug information from Fusion software.
---user: Your mapillary username, view README.
+--user: Your mapillary username, view README (only required for upload procedure).
 ```
 
 ### Stitching
