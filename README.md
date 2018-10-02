@@ -17,7 +17,7 @@ First of all you will need to download and install GoPro fusion, view instructio
 
 Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:<br/>
 `which python`<br/>
-If the output is:
+If the output is:<br/>
 `/usr/bin/python`<br/>
 Or any python available should be good to go. In case no python is installed, just [download and install it](https://www.python.org/downloads/mac-osx/).<br/>
 Easier: if you already have [homebrew](https://brew.sh/) just run:<br/>
