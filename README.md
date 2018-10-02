@@ -56,7 +56,10 @@ Confirm with the "Successfully" written at the end. All done ! Lets get to it!
 ### General
 
 The script you will be running is called: `mapillary_processor.py`.<br/>Note the `.py` extension which tells us it's a `python` script.<br/>
-Then type:```python mapillary_processor.py```
+Then type:
+```
+python mapillary_processor.py
+```
 This will output a help menu:
 ```
 Usage:
