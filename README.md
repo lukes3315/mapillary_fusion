@@ -16,7 +16,10 @@ Then confirm you are using [python](https://www.python.org/downloads/mac-osx/) (
 You may not need to download it, if you open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:
 `which python`, if the output is: `/usr/bin/python` then you are using the system one and you don't need to install anything else.
 
-### Usage:
+## Usage:
+
+
+### General
 
 The script you will be running is called: `mapillary_processor.py`. Note the `.py` extension which tells us it's a `python` script.
 Then type:
@@ -31,6 +34,8 @@ Usage:
 --upload_directory: directory containing images to upload to Mapillary's services.
 --debug: display debug information from Fusion software.
 ```
+
+### Stitching
 
 To start stitching GoPro imagery run:
 `python mapillary_processor.py --stitch_directory=gopro_images/ --output_directory=stitched_files/ --dwarp=off`
@@ -47,3 +52,10 @@ The script will automatically notice this and run the stitching on them.
 After having ran the script the output directory should look like this:
 
 ![Scheme](directory_output_structure.png)
+
+There we go! All done! you can just open the images and you'll the beautiful stitched output.
+
+### Uploading
+
+First of all, you need to register on Mapillary's [website](https://mapillary.com/signup).
+We will need the username they provide to upload data.
