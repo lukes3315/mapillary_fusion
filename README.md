@@ -46,4 +46,4 @@ The script will automatically notice this and run the stitching on them.
 
 After having ran the script the output directory should look like this:
 
-![Scheme](directory_output_structure.pngg)
+![Scheme](directory_output_structure.png)
