@@ -29,8 +29,11 @@ Easier: if you already have [homebrew](https://brew.sh/) just run:
 brew install python
 ```
 
-For the next step, ensure you have `pip` installed by repeating the same process as for `python` but with `pip`, essentially running:<br/>
-`which pip`, if no `pip` is installed, [install](https://pip.pypa.io/en/stable/installing/) as it is required for the next step. 
+For the next step, ensure you have `pip` installed by repeating the same process as for `python` but with `pip`, essentially running:
+```
+which pip
+```
+If no `pip` is installed, [install](https://pip.pypa.io/en/stable/installing/) as it is required for the next step. 
 
 You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:
 ```
