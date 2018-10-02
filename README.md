@@ -19,7 +19,7 @@ Then, confirm you have python installed, open a [terminal](https://blog.teamtree
 `which python`<br/>
 If the output is:<br/>
 `/usr/bin/python`<br/>
-Or any python available should be good to go. In case no python is installed, just [download and install it](https://www.python.org/downloads/mac-osx/).<br/>
+Or any python available should be good to go.<br/>In case no python is installed, just [download and install it](https://www.python.org/downloads/mac-osx/).<br/>
 Easier: if you already have [homebrew](https://brew.sh/) just run:<br/>
 `brew install python`
 
