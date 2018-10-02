@@ -5,6 +5,8 @@ This will allow you to:
 - Stitch GoPro images in an automated way
 - Upload images to Mapillary
 
+For any issue arising during the installation process, just [submit an issue](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get to it as soon as I can.
+
 ## Setup
 
 ### Requirements:
@@ -13,15 +15,15 @@ This will allow you to:
 
 First of all you will need to download and install GoPro fusion, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
 
-Then confirm you are using [python](https://www.python.org/downloads/mac-osx/) (on Mac OS X it is installed by default), this is the interpretation software that will be running the script.
-You may not need to download it, if you open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:
-`which python`, if the output is: `/usr/bin/python` then you are using the system one and you don't need to install anything else.
+Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:<br/>
+`which python`<br/>
+If the output is:
+`/usr/bin/python`<br/>
+Or any python available should be good to go. In case no python is installed, just [download and install it](https://www.python.org/downloads/mac-osx/).<br/>
+Easier: if you already have [homebrew](https://brew.sh/) just run:<br/>
+`brew install python`
 
-You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:
-
-`pip install --upgrade git+https://github.com/mapillary/mapillary_tools`
-
-Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
+You're almost done, now install [mapillary_tools](https://github.com/mapillary/mapillary_tools/), the main part is just running this:<br/>`pip install --upgrade git+https://github.com/mapillary/mapillary_tools`<br/>Note: that the commands should either be run in [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) or as sudo.
 
 To confirm this has been installed properly verify the `pip` output:
 
@@ -46,8 +48,7 @@ Installing collected packages: mapillary-tools
   Running setup.py install for mapillary-tools ... done
 Successfully installed mapillary-tools-0.2.0
 ```
-
-All done ! Lets get to it!
+Confirm with the "Successfully" written at the end. All done ! Lets get to it!
 
 ## Usage:
 
@@ -55,8 +56,8 @@ All done ! Lets get to it!
 ### General
 
 The script you will be running is called: `mapillary_processor.py`.<br/>Note the `.py` extension which tells us it's a `python` script.
-Then type:\ `python mapillary_processor.py`
-This will output:
+Then type:<br/>`python mapillary_processor.py`
+This will output a help menu:
 ```
 Usage:
 --help: show this menu.
