@@ -54,7 +54,7 @@ All done ! Lets get to it!
 
 ### General
 
-The script you will be running is called: `mapillary_processor.py`.\Note the `.py` extension which tells us it's a `python` script.
+The script you will be running is called: `mapillary_processor.py`.<br/>Note the `.py` extension which tells us it's a `python` script.
 Then type:\ `python mapillary_processor.py`
 This will output:
 ```
@@ -70,7 +70,7 @@ Usage:
 
 ### Stitching
 
-To start stitching GoPro imagery run:\ `python mapillary_processor.py --stitch_directory=gopro_images/ --output_directory=stitched_files/ --dwarp=off`
+To start stitching GoPro imagery run:<br/>`python mapillary_processor.py --stitch_directory=gopro_images/ --output_directory=stitched_files/ --dwarp=off`
 
 The script will automatically recognize gopro directories, match them up and run the stitching through all the files of the matched
 up directories.
@@ -89,9 +89,9 @@ There we go! All done! you can just open the images and you'll the beautiful sti
 
 ### Uploading
 
-First of all, you need to register on Mapillary's [website](https://mapillary.com/signup).\We will need the username they provide to upload data.
+First of all, you need to register on Mapillary's [website](https://mapillary.com/signup).<br/>We will need the username they provide to upload data.
 
-Once you have retrieved your username, you can just upload the data with this command line:\ `python mapillary_processor.py --upload_directory=stitched_files --user=your_username`
+Once you have retrieved your username, you can just upload the data with this command line:<br/>`python mapillary_processor.py --upload_directory=stitched_files --user=your_username`
 
 Enjoy!
-For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues)\and I'll get back to you as soon as I can.
+For any feedback please file an issue [here](https://github.com/lukes3315/mapillary_fusion/issues)<br/>and I'll get back to you as soon as I can.
