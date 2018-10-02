@@ -56,7 +56,7 @@ Confirm with the "Successfully" written at the end. All done ! Lets get to it!
 ### General
 
 The script you will be running is called: `mapillary_processor.py`.<br/>Note the `.py` extension which tells us it's a `python` script.
-Then type:<br/>`python mapillary_processor.py`
+Then type:`python mapillary_processor.py`<br/>
 This will output a help menu:
 ```
 Usage:
@@ -73,7 +73,7 @@ Usage:
 
 To start stitching GoPro imagery run:<br/>`python mapillary_processor.py --stitch_directory=gopro_images/ --output_directory=stitched_files/ --dwarp=off`
 
-The script will automatically recognize gopro directories, match them up and run the stitching through all the files of the matched
+The script will automatically recognize GoPro directories, match them up and run the stitching through all the files of the matched
 up directories.
 This is my directory structure:
 
