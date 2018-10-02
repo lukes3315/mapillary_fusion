@@ -13,7 +13,7 @@ For any issue arising during the installation or runtime processes, just [submit
 
 #### Note: has only been tested on Mac OS X.
 
-First of all you will need to download and install GoPro fusion, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
+First of all you will need to download and install GoPro Fusion Studio, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
 
 Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:
 ```
