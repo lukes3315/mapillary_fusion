@@ -5,7 +5,7 @@ This will allow you to:
 - Stitch GoPro images in an automated way
 - Upload images to Mapillary
 
-For any issue arising during the installation process, just [submit an issue](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get to it as soon as I can.
+For any issue arising during the installation or runtime processes, just [submit an issue](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get to it as soon as I can.
 
 ## Setup
 
