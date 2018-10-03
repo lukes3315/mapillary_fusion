@@ -1,6 +1,8 @@
 import sys
 import os
 from subprocess import call
+from PIL.ExifTags import TAGS
+from PIL import Image
 
 # Generic fusion path on Mac OS X to execute.
 fusion_path="/Applications/Fusion Studio 1.3.app/Contents/MacOS/./FusionStudio"
@@ -86,8 +88,37 @@ elif (len(stitch_directory) == 0 or len(output_directory) == 0):
 
 gopro_filepaths=dict()
 
+
+def getMetaInformation(file):
+    img = Image.open(file)
+    info = img._getexif()
+    decoded = dict((TAGS.get(key, key), value) for key, value in info.items())
+    # print(decoded)
+    if decoded.get('GPSInfo'):
+        exif = img.info['exif']
+        return exif
+    return None
+
+
+def writeExif(meta, output_path):
+    override_img=Image.open(output_path)
+    override_img.save(output_path, exif=meta)
+
+
+def saveExifToStitchedImage(front_meta, back_meta, output_path):
+    if (front_meta != None):
+        writeExif(front_meta,output_path)
+    elif(back_meta != None):
+        writeExif(back_meta, output_path)
+
 def execute_fusion(front_image, back_image, output_path):
     global dwarp_enabled
+
+    front_meta=getMetaInformation(front_image)
+    back_meta=None
+    if (front_meta == None):
+        back_meta=getMetaInformation(back_image)
+
     system_call_array=[]
     system_call_array.append(fusion_path)
     # Set front image path
@@ -109,6 +140,7 @@ def execute_fusion(front_image, back_image, output_path):
         system_call_array.append("1")
     
     call(system_call_array)
+    saveExifToStitchedImage(front_meta, back_meta, output_path)
 
 
 def runStitching(go_pro_number, dir_list):
@@ -131,6 +163,7 @@ def runStitching(go_pro_number, dir_list):
             front_path=os.path.join(dir_list[0], front_img[idx])
             back_path=os.path.join(dir_list[1], back_img[idx])
             # Generated stitched image output file.
+
             stitched_img=os.path.join(generated_dir_for_output, os.path.basename(front_path))
             print("Stitching " + stitched_img + "... with dwarp "  + dwarp_enabled)
 
