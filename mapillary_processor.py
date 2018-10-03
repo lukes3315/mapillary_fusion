@@ -72,24 +72,25 @@ if (len(upload_directory) > 0 and os.path.isdir(upload_directory)):
         exit(0)
     # Run Mapillary's process and upload system.
     mapillary_call=[]
+
+    # Call Mapillary's processing.
     mapillary_call.append("mapillary_tools")
     mapillary_call.append("process")
     mapillary_call.append("--import_path")
-    
-    # Set upload directory for Mapillary's upload engine
     mapillary_call.append(upload_directory)
     mapillary_call.append("--user_name")
-    # Set username for upload.
     mapillary_call.append(mapillary_username)
-
     call(mapillary_call)
 
     mapillary_call=[]
+
+    # Call Mapillary's upload.
     mapillary_call.append("mapillary_tools")
     mapillary_call.append("upload")
     mapillary_call.append("--import_path")
     mapillary_call.append(upload_directory)
     call(mapillary_call)
+    
     exit(0)
 elif (len(stitch_directory) == 0 or len(output_directory) == 0):
     print("Error: you need to input both the directory to stitch AND the output directory.")
