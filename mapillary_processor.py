@@ -73,13 +73,22 @@ if (len(upload_directory) > 0 and os.path.isdir(upload_directory)):
     # Run Mapillary's process and upload system.
     mapillary_call=[]
     mapillary_call.append("mapillary_tools")
-    mapillary_call.append("process_and_upload")
+    mapillary_call.append("process")
     mapillary_call.append("--import_path")
+    
     # Set upload directory for Mapillary's upload engine
     mapillary_call.append(upload_directory)
     mapillary_call.append("--user_name")
     # Set username for upload.
     mapillary_call.append(mapillary_username)
+
+    call(mapillary_call)
+
+    mapillary_call=[]
+    mapillary_call.append("mapillary_tools")
+    mapillary_call.append("upload")
+    mapillary_call.append("--import_path")
+    mapillary_call.append(upload_directory)
     call(mapillary_call)
     exit(0)
 elif (len(stitch_directory) == 0 or len(output_directory) == 0):
@@ -90,22 +99,25 @@ gopro_filepaths=dict()
 
 
 def getMetaInformation(file):
+    # Extract meta data from files to be re-written after stitching process.
     img = Image.open(file)
     info = img._getexif()
     decoded = dict((TAGS.get(key, key), value) for key, value in info.items())
-    # print(decoded)
     if decoded.get('GPSInfo'):
+        # Meta data returned only if GPS data is retrieved from it.
         exif = img.info['exif']
         return exif
     return None
 
 
 def writeExif(meta, output_path):
+    # Write meta data to stitched image.
     override_img=Image.open(output_path)
     override_img.save(output_path, exif=meta)
 
 
 def saveExifToStitchedImage(front_meta, back_meta, output_path):
+    # If one of the previous images had valid GPS meta info write it to the new stitched image.
     if (front_meta != None):
         writeExif(front_meta,output_path)
     elif(back_meta != None):
