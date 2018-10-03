@@ -5,7 +5,7 @@ This will allow you to:
 - Stitch GoPro images in an automated way
 - Upload images to Mapillary
 
-For any issue arising during the installation process, just [submit an issue](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get to it as soon as I can.
+For any issue arising during the installation or runtime processes, just [submit an issue](https://github.com/lukes3315/mapillary_fusion/issues) and I'll get to it as soon as I can.
 
 ## Setup
 
@@ -13,7 +13,7 @@ For any issue arising during the installation process, just [submit an issue](ht
 
 #### Note: has only been tested on Mac OS X.
 
-First of all you will need to download and install GoPro fusion, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
+First of all you will need to download and install GoPro Fusion Studio, view instructions [here](https://gopro.com/help/articles/how_to/how-to-install-fusion-studio-mac).
 
 Then, confirm you have python installed, open a [terminal](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and type:
 ```
@@ -114,7 +114,7 @@ There we go! All done! you can just open the images and you'll the beautiful sti
 
 First of all, you need to register on Mapillary's [website](https://mapillary.com/signup), we will need the username they provide to upload data.
 
-Once you have retrieved your username, you can just upload the data with this command line:
+Once you have retrieved your username (replace mapillary_user with yours), you can just upload the data with this command line:
 ```
 python mapillary_processor.py --upload_directory=stitched_files --user=mapillary_user
 ```
@@ -126,7 +126,7 @@ Enter email : mapillary_user@domain.com
 Enter user password :
 ```
 
-After having running this you should be seeing Mapillary's processing and uploading engines to some work:<br/>
+After having running this you should be seeing Mapillary's processing and uploading engines do some work:<br/>
 ```
 Sub process finished
 Running import_meta_data_process for 15 images, skipping 65 images.
